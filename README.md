@@ -14,7 +14,14 @@ Alexander:
         NodeJS
         AdobeXD
         
+Aya:
 
+        C#
+        Python
+        Prolog
+        R
+        SQL
+        ASP.Net (Razor Page)
     
 
 
