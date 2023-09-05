@@ -22,6 +22,12 @@ Aya:
         R
         SQL
         ASP.Net (Razor Page)
+
+Daniel:
+        C#
+        ASP.Net
+        SQL
+        Python
     
 
 
