@@ -28,7 +28,22 @@ Daniel:
         ASP.Net
         SQL
         Python
-    
+
+Juda
+        C#
+        ASP.net
+        PHP
+        SQL
+        Vue
+        React
+        NPM
+        Typscript
+        Javascript
+
+Sol
+        Javascript
+        React
+        C#    
 
 
 
