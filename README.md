@@ -24,6 +24,7 @@ Aya:
         ASP.Net (Razor Page)
 
 Daniel:
+
     C#
     Python
     ASP.Net
@@ -31,6 +32,7 @@ Daniel:
     
 
 Juda
+
         C#
         ASP.net
         PHP
@@ -42,6 +44,7 @@ Juda
         Javascript
 
 Sol
+
         Javascript
         React
         C#    
