@@ -3,6 +3,9 @@ import styles from './page.module.css';
 
 export default function Reservation() {
     return (
-        <h1>Reservation page</h1>
+        <main className={styles.main}>
+            <h1>Reservation page</h1>
+
+        </main>
     )
 };
