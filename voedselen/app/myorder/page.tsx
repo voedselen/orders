@@ -3,6 +3,8 @@ import styles from './page.module.css';
 
 export default function MyOrder() {
     return (
-        <h1>Myorder page</h1>
+        <main className={styles.main}>
+      <h1>Orders</h1>
+    </main>
     )
 };
