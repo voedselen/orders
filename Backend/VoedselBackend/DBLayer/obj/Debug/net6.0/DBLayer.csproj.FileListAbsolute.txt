@@ -1,0 +1,5 @@
+D:\Visual Studio Code\Voedselen\s3-db04-group-project\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\DBLayer.csproj.AssemblyReference.cache
+D:\Visual Studio Code\Voedselen\s3-db04-group-project\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\DBLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio Code\Voedselen\s3-db04-group-project\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\DBLayer.AssemblyInfoInputs.cache
+D:\Visual Studio Code\Voedselen\s3-db04-group-project\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\DBLayer.AssemblyInfo.cs
+D:\Visual Studio Code\Voedselen\s3-db04-group-project\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\DBLayer.csproj.CoreCompileInputs.cache
