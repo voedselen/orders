@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Montserrat, Montserrat_Alternates } from "next/font/google";
 import next from "next";
+import React, { ReactNode } from "react";
 
 const montserrat = Montserrat_Alternates({
   weight: "400",
@@ -72,42 +73,38 @@ export function Footer() {
   );
 }
 
-export function MenuCardFood() {
+interface MenuCardProps {
+  href: string; // Add href prop
+  children: ReactNode;
+}
+
+export function MenuCard({ href, children }: MenuCardProps) {
   return (
-    <Link href={"/menu/food"}> 
-
-    <div className={styles.menucard_wrapper}>
-
-      <Image id={styles.menucard_image} src={food} alt={"food"}></Image>
-
-      <div className={styles.menucard_text}>Food</div>
-    </div>
+    <Link href={href}>
+      <div className={styles.menucard_wrapper}>{children}</div>
     </Link>
   );
 }
-export function MenuCardDrinks() {
-  return (
-    <Link href={"/menu/drinks"}> 
-
-    <div className={styles.menucard_wrapper}>
-
-      <Image id={styles.menucard_image} src={drinks} alt={"drinks"}></Image>
-
-      <div className={styles.menucard_text}>Drinks</div>
-    </div>
-    </Link>
-  );
-}
+ 
 
 export default function Menu() {
   return (
     <>
       <main className={styles.main}>
         <div className={styles.main_div}>
-          <MenuCardFood></MenuCardFood>
-          <MenuCardDrinks></MenuCardDrinks>
-
-
+          <MenuCard href={"/menu/food"}>
+            <Image id={styles.menucard_image} src={food} alt={"food"}></Image>
+            <div className={styles.menucard_text}>Food</div>
+          </MenuCard>
+          <MenuCard href={"/menu/drinks"}>
+            <Image
+              id={styles.menucard_image}
+              src={drinks}
+              alt={"drinks"}
+            ></Image>
+            <div className={styles.menucard_text}>Drinks</div>
+          </MenuCard>
+          
         </div>
       </main>
     </>
