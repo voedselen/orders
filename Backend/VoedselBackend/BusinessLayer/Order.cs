@@ -6,7 +6,7 @@ namespace BusinessLayer
     {
         private int iD;
         private double totalPrice;
-        private List<MenuItem> orderItems = new List<MenuItem>();
+        public List<MenuItem> OrderItems = new List<MenuItem>();
         private int orderTable;
         public int OrderTable
         {
@@ -17,6 +17,13 @@ namespace BusinessLayer
         {
             get { return totalPrice; }
             set { totalPrice = value; }
+        }
+        public Order(int iD, double totalPrice, List<MenuItem> orderItems, int orderTable)
+        {
+            this.iD = iD;
+            this.OrderItems = orderItems;
+            this.orderTable = orderTable;
+            this.totalPrice = totalPrice;
         }
     }
 }
