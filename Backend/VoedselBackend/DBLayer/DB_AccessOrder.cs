@@ -53,6 +53,7 @@ namespace DBLayer
                 }
                 readerCommand.Close();
                 //reads orders but not the menuitems relevant to them, add code for this
+                return orders;
             }
             catch(Exception ex)
             {
