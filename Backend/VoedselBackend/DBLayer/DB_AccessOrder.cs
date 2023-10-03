@@ -10,7 +10,7 @@ using System.Collections;
 
 namespace DBLayer
 {
-    public class DB_AccessOrder
+    public class DB_AccessOrder : IDB_AccessOrder
     {
         private const string CONNECTION_STRING = "Server=mssqlstud.fhict.local;Database=dbi507545_voedseldb;User Id=dbi507545_voedseldb;Password=Voedsel1!;";
         //add order into db
@@ -59,7 +59,7 @@ namespace DBLayer
                 while (itemReaderCommand.Read())
                 {
                     int ID = (int)readerCommand["order_id"];
-                    string menuItem= (string)readerCommand["menu_item"];
+                    string menuItem = (string)readerCommand["menu_item"];
                     int price = (int)readerCommand["price"];
                     orders.First(item => item.ID == ID).AddMenuItem(menuItem, price);
                 }
@@ -67,7 +67,7 @@ namespace DBLayer
                 connection.Close();
                 return orders;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
                 return null;
