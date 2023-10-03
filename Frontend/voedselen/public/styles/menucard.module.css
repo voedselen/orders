@@ -1,22 +1,3 @@
-.main_div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    background-color: grey;
-    height: 100vh;
-    width: 100vw;
-    padding: 100px;
-    padding-left: 200px;
-    padding-right: 200px;
-    justify-items: center;
-    align-items: center;
-  
-  }
-  
-
-
 /* MENUCARD */
 
 .menucard_wrapper {
@@ -43,5 +24,3 @@
       width: 400px;
       border-radius: 5px;
     }
-     
-    
