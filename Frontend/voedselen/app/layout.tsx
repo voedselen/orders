@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Footer } from "./menu/page";
+import { Footer, Header } from "./menu/page";
 import { Montserrat, Montserrat_Alternates } from "next/font/google";
 import next from "next";
 
@@ -24,8 +24,9 @@ export default function RootLayout({
     <>
       <html lang="en">
         <body className={montserrat.className}>
+        <Header></Header>{" "}
           {children}
-        <Footer></Footer>
+          <Footer></Footer>
         </body>
       </html>
     </>
