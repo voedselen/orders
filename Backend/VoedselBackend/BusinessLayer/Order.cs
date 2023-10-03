@@ -4,7 +4,7 @@ namespace BusinessLayer
 {
     public class Order
     {
-        private int iD;
+        public int ID;
         private double totalPrice;
         public List<MenuItem> OrderItems = new List<MenuItem>();
         private int orderTable;
@@ -20,10 +20,14 @@ namespace BusinessLayer
         }
         public Order(int iD, double totalPrice, List<MenuItem> orderItems, int orderTable)
         {
-            this.iD = iD;
+            this.ID = iD;
             this.OrderItems = orderItems;
             this.orderTable = orderTable;
             this.totalPrice = totalPrice;
+        }
+        public void AddMenuItem(string name, int price)
+        {
+            OrderItems.Add(new MenuItem(name, (double)price));
         }
     }
 }

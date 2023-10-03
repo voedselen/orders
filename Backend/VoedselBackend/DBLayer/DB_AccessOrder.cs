@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics.Metrics;
+using System.Collections;
 
 namespace DBLayer
 {
@@ -53,6 +54,18 @@ namespace DBLayer
                 }
                 readerCommand.Close();
                 //reads orders but not the menuitems relevant to them, add code for this
+                SqlCommand readOrderItemCommand = new SqlCommand("SELECT * FROM order_items", connection);
+                //read orders
+                SqlDataReader itemReaderCommand = readOrderItemCommand.ExecuteReader();
+                while (itemReaderCommand.Read())
+                {
+                    int ID = (int)readerCommand["order_id"];
+                    string menuItem= (string)readerCommand["menu_item"];
+                    int price = (int)readerCommand["price"];
+                    orders.First(item => item.ID == ID).AddMenuItem(menuItem, price);
+                }
+                itemReaderCommand.Close();
+                connection.Close();
                 return orders;
             }
             catch(Exception ex)

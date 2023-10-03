@@ -8,9 +8,11 @@ namespace BusinessLayer
 {
     public class MenuItem
     {
-        private int id;
         private string name;
-        private string description;
         private double price;
+        public MenuItem(string name, double price)        {
+            this.name = name;
+            this.price = price;
+        }
     }
 }
