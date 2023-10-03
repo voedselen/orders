@@ -53,7 +53,6 @@ namespace DBLayer
                     orders.Add(order);
                 }
                 readerCommand.Close();
-                //reads orders but not the menuitems relevant to them, add code for this
                 SqlCommand readOrderItemCommand = new SqlCommand("SELECT * FROM order_items", connection);
                 //read orders
                 SqlDataReader itemReaderCommand = readOrderItemCommand.ExecuteReader();
