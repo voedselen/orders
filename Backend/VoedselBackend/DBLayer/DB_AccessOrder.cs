@@ -31,7 +31,6 @@ namespace DBLayer
                 Console.WriteLine(ex.ToString());
                 return false;
             }
-
         }
     }
 }
