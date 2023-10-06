@@ -1,6 +1,6 @@
 import Link from "next/link";
-import styles from "../styles/header.module.css";
-import logo from "../../public/voedselen.png";
+import styles from "../../styles/organisms/header.module.css";
+import logo from "../../../public/voedselen.png";
 import Image from "next/image";
 
 

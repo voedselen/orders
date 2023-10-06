@@ -7,17 +7,14 @@ import Link from "next/link";
 import { Montserrat, Montserrat_Alternates } from "next/font/google";
 import next from "next";
 import React, { ReactNode } from "react";
-import MenuCard from "@/public/components/menucard";
+import MenuCard from "@/public/components/molecules/menucard";
+import classnames from "classnames";
 
 const montserrat = Montserrat_Alternates({
   weight: "400",
   subsets: ["latin"],
 });
 
-
-
-
- 
 
 export default function Menu() {
   return (

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import styles from "../styles/footer.module.css";
-import logo from "../../public/voedselen.png";
+import styles from "../../styles/organisms/footer.module.css";
+import logo from "../../../public/voedselen.png";
 import Image from "next/image";
 
 export default function Footer() {

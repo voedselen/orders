@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Header from "@/public/components/header";
-import  Footer  from "@/public/components/footer";
+import Header from "@/public/components/organisms/header";
+import  Footer  from "@/public/components/organisms/footer";
 import { Montserrat, Montserrat_Alternates } from "next/font/google";
 import next from "next";
 

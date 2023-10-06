@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { ReactNode } from "react";
-import styles from '../styles/menucard.module.css';
+import styles from '../styles/molecules/menucard.module.css';
 
 
 interface MenuCardProps {

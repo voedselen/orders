@@ -1,7 +1,7 @@
 .main_div {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     background-color: grey;
@@ -12,23 +12,19 @@
     padding-right: 200px;
     justify-items: center;
     align-items: center;
-  
+
   }
-  
-
 .link {
-  background-color: rgb(85, 85, 85);
-  border-radius: 5px;
-  padding-left: 18px;
-  width: 75px;
-  height: auto;
-   
-  grid-area: 2/1;
-}
+    background-color: rgb(85, 85, 85);
+    border-radius: 5px;
+    padding-left: 18px;
+    width: 75px;
+    height: auto;
+     
+    grid-area: 2/1;
+  }
 
-
-
-/* MENUCARD */
+  /* MENUCARD */
 
 .menucard_wrapper {
     display: grid;
@@ -54,5 +50,3 @@
       width: 400px;
       border-radius: 5px;
     }
-     
-    
