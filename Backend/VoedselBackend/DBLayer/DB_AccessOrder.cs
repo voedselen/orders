@@ -20,11 +20,30 @@ namespace DBLayer
             {
                 SqlConnection connection = new SqlConnection(CONNECTION_STRING);
                 connection.Open();
-                SqlCommand insertCommand = new SqlCommand("INSERT INTO Order (TotalPrice, TableNumber) " +
+                SqlCommand insertCommand = new SqlCommand("INSERT INTO Orders (TotalPrice, TableNumber) " +
                     "VALUES (@TotalPrice, @TableNumber)", connection);
                 insertCommand.Parameters.AddWithValue("@TotalPrice", order.TotalPrice);
                 insertCommand.Parameters.AddWithValue("@TableNumber", order.OrderTable);
                 insertCommand.ExecuteNonQuery();
+                connection.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
+        }
+        //deletes order based on the order id
+        public bool DeleteOrderDB(int id)
+        {
+            try
+            {
+                SqlConnection connection = new SqlConnection(CONNECTION_STRING);
+                connection.Open();
+                string deleteCommand = ("Delete from Orders where ID = " + id.ToString() + ";");
+                SqlCommand sqlCommand = new SqlCommand(deleteCommand, connection);
+                int rowsAffected = sqlCommand.ExecuteNonQuery();
                 connection.Close();
                 return true;
             }
