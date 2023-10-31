@@ -18,5 +18,13 @@ namespace BusinessLayer
             Order order = new Order(id, totalprice, menuItems, orderTable);
             return dB_AccessOrder.AddOrderDB(order);
         }
+        public bool DeleteOrder(int id)
+        {
+            return dB_AccessOrder.DeleteOrderDB(id);
+        }
+        public List<Order>? ReadOrders()
+        {
+            return dB_AccessOrder.ReadOrdersDB();
+        }
     }
 }
