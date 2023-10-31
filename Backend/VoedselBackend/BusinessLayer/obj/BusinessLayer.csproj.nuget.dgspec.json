@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {}
+    "D:\\Visual Studio Code\\Voedselen\\s3-db04-group-project\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
+    "D:\\Visual Studio Code\\Voedselen\\s3-db04-group-project\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "D:\\Visual Studio Code\\Voedselen\\s3-db04-group-project\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\obj\\",
+        "projectPath": "D:\\Visual Studio Code\\Voedselen\\s3-db04-group-project\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\Eny\\.nuget\\packages\\",
+        "outputPath": "D:\\Visual Studio Code\\Voedselen\\s3-db04-group-project\\Backend\\VoedselBackend\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eny\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
