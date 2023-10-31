@@ -4,5 +4,6 @@
     {
         bool AddOrderDB(Order order);
         List<Order>? ReadOrdersDB();
+        bool DeleteOrderDB(int id);
     }
 }
