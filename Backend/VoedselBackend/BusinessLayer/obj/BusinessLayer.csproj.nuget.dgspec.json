@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Visual Studio Code\\Voedselen\\s3-db04-group-project\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {}
+    "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {}
   },
   "projects": {
-    "D:\\Visual Studio Code\\Voedselen\\s3-db04-group-project\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Visual Studio Code\\Voedselen\\s3-db04-group-project\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "D:\\Visual Studio Code\\Voedselen\\s3-db04-group-project\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\Eny\\.nuget\\packages\\",
-        "outputPath": "D:\\Visual Studio Code\\Voedselen\\s3-db04-group-project\\Backend\\VoedselBackend\\BusinessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\Moons\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Eny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Moons\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

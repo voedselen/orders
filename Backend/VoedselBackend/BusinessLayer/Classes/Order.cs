@@ -4,10 +4,11 @@ namespace BusinessLayer
 {
     public class Order
     {
-        public int ID;
+        public int ID { get; set; }
         private double totalPrice;
-        public List<MenuItem> OrderItems = new List<MenuItem>();
+        public List<MenuItem> OrderItems { get; set; }
         private int orderTable;
+
         public int OrderTable
         {
             get { return orderTable; }
@@ -18,6 +19,7 @@ namespace BusinessLayer
             get { return totalPrice; }
             set { totalPrice = value; }
         }
+
         public Order(int iD, double totalPrice, List<MenuItem> orderItems, int orderTable)
         {
             this.ID = iD;

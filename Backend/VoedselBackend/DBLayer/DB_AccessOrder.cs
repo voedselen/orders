@@ -12,7 +12,7 @@ namespace DBLayer
 {
     public class DB_AccessOrder : IDB_AccessOrder
     {
-        private const string CONNECTION_STRING = "Server=mssqlstud.fhict.local;Database=dbi507545_voedseldb;User Id=dbi507545_voedseldb;Password=Voedsel1!;";
+        private const string CONNECTION_STRING = "Server=mssqlstud.fhict.local;Database=dbi507545_voedseldb;User Id=dbi507545_voedseldb;Password=Voedsel1!;TrustServerCertificate=True;";
         //add order into db
         public bool AddOrderDB(Order order)
         {
@@ -55,11 +55,11 @@ namespace DBLayer
         }
         public List<Order>? ReadOrdersDB()
         {
+            List<Order> orders = new List<Order>();
             try
             {
                 SqlConnection connection = new SqlConnection(CONNECTION_STRING);
                 connection.Open();
-                List<Order> orders = new List<Order>();
                 SqlCommand readOrderCommand = new SqlCommand("SELECT * FROM Orders", connection);
                 //read orders
                 SqlDataReader readerCommand = readOrderCommand.ExecuteReader();
@@ -72,25 +72,36 @@ namespace DBLayer
                     orders.Add(order);
                 }
                 readerCommand.Close();
-                SqlCommand readOrderItemCommand = new SqlCommand("SELECT * FROM order_items", connection);
-                //read orders
-                SqlDataReader itemReaderCommand = readOrderItemCommand.ExecuteReader();
-                while (itemReaderCommand.Read())
-                {
-                    int ID = (int)readerCommand["order_id"];
-                    string menuItem = (string)readerCommand["menu_item"];
-                    int price = (int)readerCommand["price"];
-                    orders.First(item => item.ID == ID).AddMenuItem(menuItem, price);
-                }
-                itemReaderCommand.Close();
-                connection.Close();
-                return orders;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
                 return null;
             }
+            return orders;            
+        }
+
+        public List<MenuItem> ReadMenuItemsDb(int orderId)
+        {
+            SqlConnection connection = new SqlConnection(CONNECTION_STRING);
+            List<MenuItem> menuItems = new List<MenuItem>();
+
+            connection.Open();
+            SqlCommand readOrderItemCommand = new SqlCommand("select * from order_items where order_id=@order_id", connection);
+            readOrderItemCommand.Parameters.AddWithValue("@order_id", orderId);
+      
+            SqlDataReader itemReaderCommand = readOrderItemCommand.ExecuteReader();
+            while (itemReaderCommand.Read())
+            {
+                int ID = (int)itemReaderCommand["order_id"];
+                string menuItem = (string)itemReaderCommand["menu_item"];
+                int price = (int)itemReaderCommand["price"];
+                MenuItem itemToAdd = new MenuItem(menuItem, price);
+                menuItems.Add(itemToAdd);
+            }
+
+            connection.Close();
+            return menuItems;
         }
     }
 }
