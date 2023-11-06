@@ -87,11 +87,21 @@ namespace DBLayer
                     Order order = new Order(ID, price, new List<MenuItem>(), table);
                     orders.Add(order);
                 }
+                readerCommand.Close();
                 foreach (Order order in orders)
                 {
-
+                    SqlCommand readItemsCommand = new SqlCommand("SELECT from order_items where ID = " + order.ToString() + ";", connection);
+                    //read items
+                    SqlDataReader readerItemsCommand = readItemsCommand.ExecuteReader();
+                    while (readerItemsCommand.Read())
+                    {
+                        int price = (int)readerItemsCommand["price"];
+                        string name = (string)readerItemsCommand["menu_item"];
+                        order.AddMenuItem(name, price);
+                    }
+                    readerItemsCommand.Close();
                 }
-                readerCommand.Close();
+                connection.Close();
             }
             catch (Exception ex)
             {
