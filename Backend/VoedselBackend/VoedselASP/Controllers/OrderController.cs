@@ -1,4 +1,6 @@
 ﻿using BusinessLayer;
+using BusinessLayer.DB_Interfaces;
+using DBLayer;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -9,29 +11,49 @@ namespace VoedselASP.Controllers
     [ApiController]
     public class OrderController : ControllerBase
     {
-        private readonly AccessOrders _orderLogic;
-        public OrderController(IDB_AccessOrder iAccessOrder)
+        private readonly IOrderBusinessLogic _orderLogic;
+        public OrderController(IOrderBusinessLogic iAccessOrder)
         {
-           _orderLogic = new AccessOrders(iAccessOrder);
+            _orderLogic = iAccessOrder;
         }
         // GET: api/<OrderController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        [HttpGet(template: "getall")]
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
-        }
+            bool result = true;
 
-        // GET api/<OrderController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
+            try
+            {
+                List<Order> orders =_orderLogic.ReadOrdersDB();
+                var response = new { result = result, status = 200, message = "success", orders=orders.ToArray() };
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                result = false;
+                var response = new { result = result, status = 200, message = ex.Message };
+                return BadRequest(response);
+            }
         }
 
         // POST api/<OrderController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost(template:"post")]
+        public IActionResult Post([FromBody] Order order)
         {
+            bool result = true;
+
+            try
+            {
+                _orderLogic.AddOrderDB(order);
+                var response = new { result = result, status=200, message="success" };
+                return Ok(response);
+            }
+            catch(Exception ex)
+            {
+                result = false;
+                var response = new { result = result, status = 200, message=ex.Message };
+                return BadRequest(response);
+            }
         }
 
         // PUT api/<OrderController>/5
@@ -41,9 +63,23 @@ namespace VoedselASP.Controllers
         }
 
         // DELETE api/<OrderController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete(template: "delete")]
+        public IActionResult Delete([FromQuery] int id)
         {
+            bool result = true;
+
+            try
+            {
+                _orderLogic.DeleteOrderDB(id);
+                var response = new { result = result, status = 200, message = "success" };
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                result = false;
+                var response = new { result = result, status = 200, message = ex.Message };
+                return BadRequest(response);
+            }
         }
     }
 }
