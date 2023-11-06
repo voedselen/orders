@@ -54,6 +54,9 @@ namespace DBLayer
             {
                 SqlConnection connection = new SqlConnection(CONNECTION_STRING);
                 connection.Open();
+                string deleteItemCommand = ("Delete from order_items where order_id = " + id.ToString() + ";");
+                SqlCommand sqlItemCommand = new SqlCommand(deleteItemCommand, connection);
+                sqlItemCommand.ExecuteNonQuery();
                 string deleteCommand = ("Delete from Orders where ID = " + id.ToString() + ";");
                 SqlCommand sqlCommand = new SqlCommand(deleteCommand, connection);
                 int rowsAffected = sqlCommand.ExecuteNonQuery();
@@ -83,6 +86,10 @@ namespace DBLayer
                     int table = (int)readerCommand["TableNumber"];
                     Order order = new Order(ID, price, new List<MenuItem>(), table);
                     orders.Add(order);
+                }
+                foreach (Order order in orders)
+                {
+
                 }
                 readerCommand.Close();
             }
