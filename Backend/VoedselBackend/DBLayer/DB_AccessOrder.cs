@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics.Metrics;
 using System.Collections;
+using System.Data;
 
 namespace DBLayer
 {
@@ -24,7 +25,19 @@ namespace DBLayer
                     "VALUES (@TotalPrice, @TableNumber)", connection);
                 insertCommand.Parameters.AddWithValue("@TotalPrice", order.TotalPrice);
                 insertCommand.Parameters.AddWithValue("@TableNumber", order.OrderTable);
-                insertCommand.ExecuteNonQuery();
+                int orderID = Convert.ToInt32(insertCommand.ExecuteScalar());
+                if (order.OrderItems.Count != 0)
+                {
+                    foreach (MenuItem menuItem in order.OrderItems)
+                    {
+                        SqlCommand insertItemCommand = new SqlCommand("INSERT INTO order_items (order_id, menu_item, price) " +
+                    "VALUES (@Order_id, @Menu_item, @Price)", connection);
+                        insertItemCommand.Parameters.AddWithValue("@Order_id", orderID);
+                        insertItemCommand.Parameters.AddWithValue("@Menu_item", menuItem.name);
+                        insertItemCommand.Parameters.AddWithValue("@Price", menuItem.price);
+                        insertItemCommand.ExecuteNonQuery();
+                    }
+                }
                 connection.Close();
                 return true;
             }
