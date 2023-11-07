@@ -33,3 +33,18 @@ E:\Visual Studio\VoedselenOrders\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0
 E:\Visual Studio\VoedselenOrders\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\refint\DBLayer.dll
 E:\Visual Studio\VoedselenOrders\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\DBLayer.pdb
 E:\Visual Studio\VoedselenOrders\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\ref\DBLayer.dll
+C:\Users\HP\Documents\Fontys\Software\Sem3\orders\Backend\VoedselBackend\DBLayer\bin\Debug\net6.0\DBLayer.deps.json
+C:\Users\HP\Documents\Fontys\Software\Sem3\orders\Backend\VoedselBackend\DBLayer\bin\Debug\net6.0\DBLayer.dll
+C:\Users\HP\Documents\Fontys\Software\Sem3\orders\Backend\VoedselBackend\DBLayer\bin\Debug\net6.0\DBLayer.pdb
+C:\Users\HP\Documents\Fontys\Software\Sem3\orders\Backend\VoedselBackend\DBLayer\bin\Debug\net6.0\BusinessLayer.dll
+C:\Users\HP\Documents\Fontys\Software\Sem3\orders\Backend\VoedselBackend\DBLayer\bin\Debug\net6.0\BusinessLayer.pdb
+C:\Users\HP\Documents\Fontys\Software\Sem3\orders\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\DBLayer.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\Fontys\Software\Sem3\orders\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\DBLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\Fontys\Software\Sem3\orders\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\DBLayer.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\Fontys\Software\Sem3\orders\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\DBLayer.AssemblyInfo.cs
+C:\Users\HP\Documents\Fontys\Software\Sem3\orders\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\DBLayer.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\Fontys\Software\Sem3\orders\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\DBLayer.csproj.CopyComplete
+C:\Users\HP\Documents\Fontys\Software\Sem3\orders\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\DBLayer.dll
+C:\Users\HP\Documents\Fontys\Software\Sem3\orders\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\refint\DBLayer.dll
+C:\Users\HP\Documents\Fontys\Software\Sem3\orders\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\DBLayer.pdb
+C:\Users\HP\Documents\Fontys\Software\Sem3\orders\Backend\VoedselBackend\DBLayer\obj\Debug\net6.0\ref\DBLayer.dll
