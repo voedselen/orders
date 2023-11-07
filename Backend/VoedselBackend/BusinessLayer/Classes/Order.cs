@@ -36,9 +36,18 @@ namespace BusinessLayer
             this.paid = false;
         }
 
-        public Order(int iD, double totalPrice, List<MenuItem> orderItems, int orderTable, bool paid)
+        public Order(int id, List<MenuItem> orderItems, int orderTable)
         {
-            this.ID = iD;
+            this.ID = id;
+            this.OrderItems = orderItems;
+            this.orderTable = orderTable;
+            this.totalPrice = totalPrice;
+            this.paid = paid;
+        }
+
+        public Order(int id, List<MenuItem> orderItems, int orderTable, bool paid)
+        {
+            this.ID = id;
             this.OrderItems = orderItems;
             this.orderTable = orderTable;
             this.totalPrice = totalPrice;

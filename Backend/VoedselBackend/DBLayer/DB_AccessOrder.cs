@@ -21,9 +21,8 @@ namespace DBLayer
             {
                 SqlConnection connection = new SqlConnection(CONNECTION_STRING);
                 connection.Open();
-                SqlCommand insertCommand = new SqlCommand("INSERT INTO Orders (TotalPrice, TableNumber) OUTPUT INSERTED.id " +
-                    "VALUES (@TotalPrice, @TableNumber)", connection);
-                insertCommand.Parameters.AddWithValue("@TotalPrice", order.TotalPrice);
+                SqlCommand insertCommand = new SqlCommand("INSERT INTO Orders (TableNumber) OUTPUT INSERTED.id " +
+                    "VALUES (@TableNumber)", connection);
                 insertCommand.Parameters.AddWithValue("@TableNumber", order.OrderTable);
                 int orderID = Convert.ToInt32(insertCommand.ExecuteScalar());
 
@@ -83,9 +82,8 @@ namespace DBLayer
                 while (readerCommand.Read())
                 {
                     int ID = (int)readerCommand["ID"];
-                    int price = (int)readerCommand["TotalPrice"];
                     int table = (int)readerCommand["TableNumber"];
-                    Order order = new Order(ID, price, new List<MenuItem>(), table);
+                    Order order = new Order(ID, new List<MenuItem>(), table);
                     orders.Add(order);
                 }
                 readerCommand.Close();
