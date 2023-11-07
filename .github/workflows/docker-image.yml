@@ -18,5 +18,7 @@ jobs:
       run: cd ./Backend/VoedselBackend/VoedselASP && ls
     - name: check
       run: ls
+    - name: login
+      run: docker login -u i507797 -p Klorsteuvui3
     - name: Build the Docker image
       run: cd ./Backend/VoedselBackend/ && ls && docker build . --file Dockerfile --tag my-image-name:1 
