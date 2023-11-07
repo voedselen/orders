@@ -1,0 +1,27 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Restore dependencies
+      run: cd ./Backend/VoedselBackend/VoedselASP && ls
+    - name: check
+      run: ls
+    - name: docker login
+      run: docker login -u i507797 -p Klorsteuvui3
+    - name: Build the Docker image
+      run: cd ./Backend/VoedselBackend/ && ls && docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: docker push
+      run: cd ./Backend/VoedselBackend/ && docker push test:1
+      

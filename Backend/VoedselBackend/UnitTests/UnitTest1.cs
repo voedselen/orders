@@ -1,11 +1,16 @@
+using 
+
 namespace UnitTests
 {
     [TestClass]
-    public class UnitTest1
+    public class AccessOrdersTests
     {
+        //add order with correct information
         [TestMethod]
-        public void TestMethod1()
+        public void AddOrder()
         {
+
         }
+        //add order with incomplete information
     }
 }
