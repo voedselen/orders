@@ -14,5 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Restore dependencies
+      run: cd ./Backend/VoedselBackend/VoedselASP
     - name: Build the Docker image
-      run: docker build ./VoedselASP --file Dockerfile --tag my-image-name:1 
+      run: docker build . --file Dockerfile --tag my-image-name:1 
