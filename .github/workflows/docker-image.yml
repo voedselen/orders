@@ -21,7 +21,7 @@ jobs:
     - name: docker login
       run: docker login -u i507797 -p Klorsteuvui3
     - name: Build the Docker image
-      run: cd ./Backend/VoedselBackend/ && ls && docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: cd ./Backend/VoedselBackend/ && ls && docker build . --file Dockerfile --tag test:1
     - name: docker push
       run: cd ./Backend/VoedselBackend/ && docker push test:1
       
