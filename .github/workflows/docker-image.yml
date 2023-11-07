@@ -21,5 +21,4 @@ jobs:
     - name: docker login
       run: docker login -u i507797 -p Klorsteuvui3
     - name: Build the Docker image
-      run: cd ./Backend/VoedselBackend/ && ls && docker build i507797/s3-gp-order-docker-repo/latest . --file Dockerfile
-  
+      run: cd ./Backend/VoedselBackend/ && ls && docker build . --file Dockerfile --tag test:1
