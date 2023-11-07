@@ -19,4 +19,4 @@ jobs:
     - name: check
       run: ls
     - name: Build the Docker image
-      run: cd ./Backend/VoedselBackend/VoedselASP && docker build . --file Dockerfile --tag my-image-name:1 
+      run: cd ./Backend/VoedselBackend/VoedselASP && ls && docker build . --file Dockerfile --tag my-image-name:1 
