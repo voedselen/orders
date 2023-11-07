@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj": {}
+    "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\Moons\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Moons\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,21 +55,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj": {
+    "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj",
         "projectName": "DBLayer",
-        "projectPath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\DBLayer\\obj\\",
+        "projectPath": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj",
+        "packagesPath": "C:\\Users\\Moons\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\DBLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Moons\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,8 +83,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj"
+              "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj"
               }
             }
           }
@@ -120,21 +120,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj": {
+    "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj",
+        "projectUniqueName": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj",
         "projectName": "VoedselASP",
-        "projectPath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\VoedselASP\\obj\\",
+        "projectPath": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj",
+        "packagesPath": "C:\\Users\\Moons\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\VoedselASP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Moons\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -148,11 +148,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj"
+              "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj"
               },
-              "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj": {
-                "projectPath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj"
+              "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj": {
+                "projectPath": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj"
               }
             }
           }
@@ -170,6 +170,10 @@
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.1.2, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.19.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -199,7 +203,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

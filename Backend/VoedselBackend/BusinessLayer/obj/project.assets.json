@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {}
+    "C:\\Users\\Moons\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
       "projectName": "BusinessLayer",
-      "projectPath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\obj\\",
+      "projectPath": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
+      "packagesPath": "C:\\Users\\Moons\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Moons\\source\\repos\\s3-gp\\orders\\Backend\\VoedselBackend\\BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Moons\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
