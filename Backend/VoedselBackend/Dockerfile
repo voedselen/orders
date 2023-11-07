@@ -7,8 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["VoedselASP.csproj", "."]
-RUN ls
+COPY ["./VoedselASP/VoedselASP.csproj", "VoedselASP/"]
 COPY ["BusinessLayer.csproj", "../BusinessLayer/"]
 COPY ["DBLayer/DBLayer.csproj", "DBLayer/"]
 RUN dotnet restore "VoedselASP/VoedselASP.csproj"
