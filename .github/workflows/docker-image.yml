@@ -17,4 +17,4 @@ jobs:
     - name: Restore dependencies
       run: cd ./Backend/VoedselBackend/VoedselASP
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:1 
+      run: docker build Backend/VoedselBackend/VoedselASP --file Dockerfile --tag my-image-name:1 
