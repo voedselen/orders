@@ -23,5 +23,5 @@ jobs:
     - name: Build the Docker image
       run: cd ./Backend/VoedselBackend/ && ls && docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     - name: docker push
-      run: docker push test:1
+      run: cd ./Backend/VoedselBackend/ && docker push test:1
       
