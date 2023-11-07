@@ -16,6 +16,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Restore dependencies
       run: cd ./Backend/VoedselBackend/VoedselASP
+      run: ls
     - name: check
       run: ls
     - name: Build the Docker image
