@@ -19,6 +19,6 @@ jobs:
     - name: check
       run: ls
     - name: docker login
-      run: docker login -u &DOCKER_USERNAME -p &DOCKER_PASSWORD
+      run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
     - name: Build the Docker image
       run: cd ./Backend/VoedselBackend/ && ls && docker build . --file Dockerfile --tag i507797/s3-gp-order-docker-repo:latest && docker push i507797/s3-gp-order-docker-repo:latest 
