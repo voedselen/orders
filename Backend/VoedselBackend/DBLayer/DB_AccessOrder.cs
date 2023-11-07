@@ -21,16 +21,17 @@ namespace DBLayer
             {
                 SqlConnection connection = new SqlConnection(CONNECTION_STRING);
                 connection.Open();
-                SqlCommand insertCommand = new SqlCommand("INSERT INTO Orders (TotalPrice, TableNumber) " +
+                SqlCommand insertCommand = new SqlCommand("INSERT INTO Orders (TotalPrice, TableNumber) OUTPUT INSERTED.id " +
                     "VALUES (@TotalPrice, @TableNumber)", connection);
                 insertCommand.Parameters.AddWithValue("@TotalPrice", order.TotalPrice);
                 insertCommand.Parameters.AddWithValue("@TableNumber", order.OrderTable);
                 int orderID = Convert.ToInt32(insertCommand.ExecuteScalar());
+
                 if (order.OrderItems.Count != 0)
                 {
                     foreach (MenuItem menuItem in order.OrderItems)
                     {
-                        SqlCommand insertItemCommand = new SqlCommand("INSERT INTO order_items (order_id, menu_item, price) " +
+                        SqlCommand insertItemCommand = new SqlCommand("INSERT INTO order_items (order_id, menu_item, price)" +
                     "VALUES (@Order_id, @Menu_item, @Price)", connection);
                         insertItemCommand.Parameters.AddWithValue("@Order_id", orderID);
                         insertItemCommand.Parameters.AddWithValue("@Menu_item", menuItem.name);
@@ -90,7 +91,7 @@ namespace DBLayer
                 readerCommand.Close();
                 foreach (Order order in orders)
                 {
-                    SqlCommand readItemsCommand = new SqlCommand("SELECT from order_items where ID = " + order.ToString() + ";", connection);
+                    SqlCommand readItemsCommand = new SqlCommand("SELECT * from order_items where order_ID = " + order.ID.ToString() + ";", connection);
                     //read items
                     SqlDataReader readerItemsCommand = readItemsCommand.ExecuteReader();
                     while (readerItemsCommand.Read())

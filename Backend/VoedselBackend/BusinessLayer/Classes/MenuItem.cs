@@ -10,9 +10,11 @@ namespace BusinessLayer
     {
         public string name { get; private set; }
         public double price { get; private set; }
-                public MenuItem(string name, double price)        {
+
+        public MenuItem(string name, double price)        {
             this.name = name;
             this.price = price;
         }
+
     }
 }
