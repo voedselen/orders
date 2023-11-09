@@ -15,6 +15,15 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IOrderBusinessLogic>(new AccessOrders(new DB_AccessOrder()));
 var app = builder.Build();
 
+// Enable CORS
+app.UseCors(policy =>
+{
+    policy.WithOrigins("http://localhost:3000")
+          .AllowAnyHeader()
+          .AllowAnyMethod()
+          .AllowCredentials();
+});
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
