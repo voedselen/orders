@@ -16,13 +16,21 @@ namespace BusinessLayer
         }
         public bool AddOrderDB(Order order)
         {
-            if (order == null || order.ID<0 || order.OrderItems.Count<=0)
+            try
             {
-                return false;
+                if (order == null || order.ID < 0 || order.OrderItems.Count <= 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return dB_AccessOrder.AddOrderDB(order);
+                }
             }
-            else
+            catch(Exception ex)
             {
-                return dB_AccessOrder.AddOrderDB(order);
+                Console.WriteLine(ex.Message);
+                return false;
             }
         }
 
