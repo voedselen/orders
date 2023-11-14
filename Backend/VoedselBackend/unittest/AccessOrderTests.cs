@@ -211,6 +211,7 @@ namespace BusinessLayer.Tests
                 ID = 1,
                 OrderItems = new List<MenuItem> { new MenuItem("Item1", 10), new MenuItem("Item2", 15) },
                 OrderTable = 2
+
             };
 
             mockDBAccessOrder.Setup(db => db.AddOrderDB(It.IsAny<Order>())).Returns(true);
