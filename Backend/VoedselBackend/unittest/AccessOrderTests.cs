@@ -29,7 +29,8 @@ namespace BusinessLayer.Tests
             {
                 ID = 1,
                 OrderItems = new List<MenuItem> { new MenuItem("Item1", 10), new MenuItem("Item2", 15) },
-                OrderTable = 2
+                OrderTable = 2,
+                TotalPrice = 3
             };
 
             mockDBAccessOrder.Setup(db => db.AddOrderDB(It.IsAny<Order>())).Returns(true);
@@ -210,8 +211,8 @@ namespace BusinessLayer.Tests
             {
                 ID = 1,
                 OrderItems = new List<MenuItem> { new MenuItem("Item1", 10), new MenuItem("Item2", 15) },
-                OrderTable = 2
-
+                OrderTable = 2,
+                TotalPrice = 5
             };
 
             mockDBAccessOrder.Setup(db => db.AddOrderDB(It.IsAny<Order>())).Returns(true);

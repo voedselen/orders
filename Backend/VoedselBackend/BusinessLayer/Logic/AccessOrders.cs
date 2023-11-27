@@ -18,7 +18,7 @@ namespace BusinessLayer
         {
             try
             {
-                if (order == null || order.ID < 0 || order.OrderItems.Count <= 0 || order.TotalPrice == 0)
+                if (order == null || order.ID < 0 || !order.OrderItems.Any() || order.TotalPrice == 0)
                 {
                     return false;
                 }
