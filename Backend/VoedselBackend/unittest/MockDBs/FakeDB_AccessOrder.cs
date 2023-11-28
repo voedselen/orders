@@ -69,9 +69,9 @@ namespace UnitTests
         {
             return new List<Order>
             {
-                new Order(1, 21, ReadMenuItemsDb(1), 2),
-                new Order(2, 34, ReadMenuItemsDb(2), 3),
-                new Order(3, 22, ReadMenuItemsDb(3), 1)
+                new Order(1, new List<MenuItem>(), 1),
+                new Order(2, new List<MenuItem>(), 2),
+                new Order(3, new List < MenuItem >(), 3)
             };
         }
     }
