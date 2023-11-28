@@ -22,10 +22,10 @@ jobs:
         dotnet-version: 6.0.x
 
     - name: Restore Dependencies
-      run: dotnet restore ./Backend/VoedselBackend/VoedselASP
+      run: dotnet restore ./Backend/VoedselBackend
 
     - name: Build
-      run: dotnet build ./Backend/VoedselBackend/VoedselASP
+      run: dotnet build ./Backend/VoedselBackend
 
     - name: Run Unit Tests
-      run: dotnet test ./Backend/VoedselBackend/VoedselASP --no-build
+      run: dotnet test ./Backend/VoedselBackend --no-build
