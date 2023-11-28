@@ -28,4 +28,4 @@ jobs:
       run: dotnet build ./Backend/VoedselBackend/VoedselASP
 
     - name: Run Unit Tests
-      run: dotnet test ./Backend/VoedselBackend/VoedselASP --no-build
+      run: dotnet test ./Backend/VoedselBackend/VoedselASP/UnitTests --no-build
