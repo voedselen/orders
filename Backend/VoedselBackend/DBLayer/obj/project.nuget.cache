@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "y01/fLR0Bq6hhTosssjVEaf1NpnMwe3bTmThpgKV9apJrP71PbRc33GsEX+SWYJVF0cBNY68g6AiNFbntciANQ==",
+=======
+  "dgSpecHash": "Im0lpanW/wK6hXuDuul9H0nT5xjks1tw5rgVxCdEkHkT9ujgtIcbvchEHxSXLJOvZUQLLp+jCSiPm9CGjLG0zQ==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj",
   "expectedPackageFiles": [
@@ -8,8 +12,13 @@
     "C:\\Users\\Klave\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\Klave\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Klave\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+<<<<<<< Updated upstream
     "C:\\Users\\Klave\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
     "C:\\Users\\Klave\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.0\\microsoft.data.sqlclient.sni.runtime.5.1.0.nupkg.sha512",
+=======
+    "C:\\Users\\Klave\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.2\\microsoft.data.sqlclient.5.1.2.nupkg.sha512",
+    "C:\\Users\\Klave\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.1\\microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512",
+>>>>>>> Stashed changes
     "C:\\Users\\Klave\\.nuget\\packages\\microsoft.identity.client\\4.47.2\\microsoft.identity.client.4.47.2.nupkg.sha512",
     "C:\\Users\\Klave\\.nuget\\packages\\microsoft.identity.client.extensions.msal\\2.19.3\\microsoft.identity.client.extensions.msal.2.19.3.nupkg.sha512",
     "C:\\Users\\Klave\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.24.0\\microsoft.identitymodel.abstractions.6.24.0.nupkg.sha512",

@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "lWcrceX4qvfm0PoM+u/OlkL2Te9CWenhP9qxHVMGTaD0K/An5rhFku7X5TYidb590I/9n5XLZbtClm5uIiVbLQ==",
+=======
+  "dgSpecHash": "WWGFaOfatabicoDu45omiBQwfayDPSdYAuB/h3lUHYHG2tmZG0Sm3/XoW1eBbivghfdAGTq41FZduCpPj8UKSQ==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj",
   "expectedPackageFiles": [
