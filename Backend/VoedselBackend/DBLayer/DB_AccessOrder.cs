@@ -32,10 +32,11 @@ namespace DBLayer
             {
                 SqlConnection connection = new SqlConnection(CONNECTION_STRING);
                 connection.Open();
-                SqlCommand insertCommand = new SqlCommand("INSERT INTO Orders (TableNumber, Message) OUTPUT INSERTED.id " +
-                    "VALUES (@TableNumber, @Message)", connection);
+                SqlCommand insertCommand = new SqlCommand("INSERT INTO Orders (TableNumber, Message, Paid) OUTPUT INSERTED.id " +
+                    "VALUES (@TableNumber, @Message, @Paid)", connection);
                 insertCommand.Parameters.AddWithValue("@TableNumber", order.OrderTable);
                 insertCommand.Parameters.AddWithValue("@Message", order.OrderMsg);
+                insertCommand.Parameters.AddWithValue("@Paid", order.paid);
                 int orderID = Convert.ToInt32(insertCommand.ExecuteScalar());
 
                 if (order.OrderItems.Count != 0)
