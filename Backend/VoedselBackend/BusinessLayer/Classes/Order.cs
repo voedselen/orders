@@ -8,14 +8,14 @@ namespace BusinessLayer
         [JsonIgnore]
         public int ID { get; set; }
         private double totalPrice;
-        private string orderMsg;
-        public string OrderMsg
+        private string? orderMsg;
+        public string? OrderMsg
         {
             get; set;
         }
         public List<MenuItem> OrderItems { get; set; }
         private int orderTable;
-        public bool paid { get; private set; }
+        public bool? paid { get; private set; }
 
         public int OrderTable
         {
@@ -32,7 +32,7 @@ namespace BusinessLayer
         {
         }
 
-        public Order(int iD, List<MenuItem> orderItems, int orderTable, string orderMsg, bool isPaid)
+        public Order(int iD, List<MenuItem> orderItems, int orderTable, string? orderMsg, bool? isPaid)
         {
             this.ID = iD;
             this.OrderItems = orderItems;
@@ -50,7 +50,7 @@ namespace BusinessLayer
             this.orderMsg = "";
         }
 
-        public Order(int id, List<MenuItem> orderItems, int orderTable, bool paid)
+        public Order(int id, List<MenuItem> orderItems, int orderTable, bool? paid)
         {
             this.ID = id;
             this.OrderItems = orderItems;

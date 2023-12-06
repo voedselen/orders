@@ -46,11 +46,6 @@ namespace BusinessLayer
         public List<Order>? ReadOrdersDB()
         {
             List<Order> orders = dB_AccessOrder.ReadOrdersDB();
-            foreach(Order order in orders)
-            {
-                order.OrderItems = dB_AccessOrder.ReadMenuItemsDb(order.ID);
-            }
-
             return orders;
         }
     }
