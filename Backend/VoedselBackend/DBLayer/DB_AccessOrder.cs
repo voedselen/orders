@@ -15,15 +15,28 @@ namespace DBLayer
     {
         private const string CONNECTION_STRING = "Server=mssqlstud.fhict.local;Database=dbi507545_voedseldb;User Id=dbi507545_voedseldb;Password=Voedsel1!;TrustServerCertificate=True;";
         //add order into db
+        public static T ConvertFromDBVal<T>(object obj)
+        {
+            if (obj == null || obj == DBNull.Value)
+            {
+                return default(T); // returns the default value for the type
+            }
+            else
+            {
+                return (T)obj;
+            }
+        }
         public bool AddOrderDB(Order order)
         {
             try
             {
                 SqlConnection connection = new SqlConnection(CONNECTION_STRING);
                 connection.Open();
-                SqlCommand insertCommand = new SqlCommand("INSERT INTO Orders (TableNumber) OUTPUT INSERTED.id " +
-                    "VALUES (@TableNumber)", connection);
+                SqlCommand insertCommand = new SqlCommand("INSERT INTO Orders (TableNumber, Message, Paid) OUTPUT INSERTED.id " +
+                    "VALUES (@TableNumber, @Message, @Paid)", connection);
                 insertCommand.Parameters.AddWithValue("@TableNumber", order.OrderTable);
+                insertCommand.Parameters.AddWithValue("@Message", order.OrderMsg);
+                insertCommand.Parameters.AddWithValue("@Paid", order.paid);
                 int orderID = Convert.ToInt32(insertCommand.ExecuteScalar());
 
                 if (order.OrderItems.Count != 0)
@@ -83,7 +96,18 @@ namespace DBLayer
                 {
                     int ID = (int)readerCommand["ID"];
                     int table = (int)readerCommand["TableNumber"];
-                    Order order = new Order(ID, new List<MenuItem>(), table);
+                    bool? isPaid = null;
+                    if (readerCommand["paid"] != DBNull.Value)
+                    {
+                        byte paidByte = (byte)readerCommand["paid"];
+                        isPaid = paidByte != 0; // Assuming 0 means false, any other value means true
+                    }
+                    string? message = readerCommand["message"] as string;
+                    if (readerCommand["message"] != DBNull.Value)
+                    {
+                        message = (string)readerCommand["message"];
+                    }
+                    Order order = new Order(ID, new List<MenuItem>(), table, message, isPaid);
                     orders.Add(order);
                 }
                 readerCommand.Close();
@@ -110,27 +134,32 @@ namespace DBLayer
             return orders;            
         }
 
-        public List<MenuItem> ReadMenuItemsDb(int orderId)
+        public List<MenuItem>? ReadMenuItemsDb(int orderId)
         {
             SqlConnection connection = new SqlConnection(CONNECTION_STRING);
             List<MenuItem> menuItems = new List<MenuItem>();
-
-            connection.Open();
-            SqlCommand readOrderItemCommand = new SqlCommand("select * from order_items where order_id=@order_id", connection);
-            readOrderItemCommand.Parameters.AddWithValue("@order_id", orderId);
-      
-            SqlDataReader itemReaderCommand = readOrderItemCommand.ExecuteReader();
-            while (itemReaderCommand.Read())
+            try
             {
-                int ID = (int)itemReaderCommand["order_id"];
-                string menuItem = (string)itemReaderCommand["menu_item"];
-                int price = (int)itemReaderCommand["price"];
-                MenuItem itemToAdd = new MenuItem(menuItem, price);
-                menuItems.Add(itemToAdd);
+                connection.Open();
+                SqlCommand readOrderItemCommand = new SqlCommand("select * from order_items where order_id=@order_id", connection);
+                readOrderItemCommand.Parameters.AddWithValue("@order_id", orderId);
+                SqlDataReader itemReaderCommand = readOrderItemCommand.ExecuteReader();
+                while (itemReaderCommand.Read())
+                {
+                    int ID = (int)itemReaderCommand["order_id"];
+                    string menuItem = (string)itemReaderCommand["menu_item"];
+                    int price = (int)itemReaderCommand["price"];
+                    MenuItem itemToAdd = new MenuItem(menuItem, price);
+                    menuItems.Add(itemToAdd);
+                }
+                connection.Close();
+                return menuItems;
             }
-
-            connection.Close();
-            return menuItems;
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
     }
 }
