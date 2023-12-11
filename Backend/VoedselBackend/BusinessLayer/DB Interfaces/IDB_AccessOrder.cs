@@ -6,5 +6,6 @@
         List<Order>? ReadOrdersDB();
         bool DeleteOrderDB(int id);
         List<MenuItem> ReadMenuItemsDb(int orderId);
+        List<Order> GetUnpaidOrdersByTableNumber(int tableNumber);
     }
 }

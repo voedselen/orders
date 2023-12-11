@@ -11,5 +11,6 @@ namespace BusinessLayer.DB_Interfaces
         bool AddOrderDB(Order order);
         List<Order>? ReadOrdersDB();
         bool DeleteOrderDB(int id);
+        List<Order> GetUnpaidOrdersByTableNumber(int tableNumber);
     }
 }
