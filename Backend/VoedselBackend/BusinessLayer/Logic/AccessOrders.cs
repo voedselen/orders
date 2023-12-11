@@ -48,5 +48,18 @@ namespace BusinessLayer
             List<Order> orders = dB_AccessOrder.ReadOrdersDB();
             return orders;
         }
+
+        public List<Order> GetUnpaidOrdersByTableNumber(int tableNumber)
+        {
+            try
+            {
+                return dB_AccessOrder.GetUnpaidOrdersByTableNumber(tableNumber);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+        }
     }
 }

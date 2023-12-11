@@ -81,5 +81,26 @@ namespace VoedselASP.Controllers
                 return BadRequest(response);
             }
         }
+
+        // To hit this endpoint, use an id as parameter within the url: (only available when using POST)
+        // https://localhost:7116/api/Order/UnpaidOrdersByTableNumber?tablenumber={dynamic id}
+        [HttpPost(template: "FetchUnpaidOrdersByTableNumber")]
+        public IActionResult UnpaidOrdersByTableNumber([FromQuery] int tableNumber)
+        {
+            bool result = true;
+
+            try
+            {
+                List<Order>unpaidTableOrdersResult = _orderLogic.GetUnpaidOrdersByTableNumber(tableNumber);
+                var response = new { result = result, status = 200, message = "success" , unpaidTableOrders = unpaidTableOrdersResult.ToArray() };
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                result = false;
+                var response = new { result = result, status = 500, message = ex.Message };
+                return BadRequest(response);
+            }
+        }
     }
 }

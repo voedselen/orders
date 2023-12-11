@@ -161,5 +161,39 @@ namespace DBLayer
                 return null;
             }
         }
+
+        // Gets orders that are set as unpaid and the 
+        public List<Order> GetUnpaidOrdersByTableNumber(int tableNumber)
+        {
+            List<Order> orders = new List<Order>();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(CONNECTION_STRING))
+                {
+                    connection.Open();
+
+                    using (SqlCommand readOrderItemCommand = new SqlCommand("select id from Orders where tableNumber=@tableNumber AND paid = 0", connection))
+                    {
+                        readOrderItemCommand.Parameters.AddWithValue("@tableNumber", tableNumber);
+
+                        using (SqlDataReader reader = readOrderItemCommand.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                int orderId = (int)reader["id"];
+                                orders.Add(new Order(orderId, orderItems: ReadMenuItemsDb(orderId), tableNumber, false));
+                            }
+                        }
+                    }
+                }
+
+                return orders;
+            }
+            catch (Exception)
+            {
+                throw new Exception("The backend-server could not fetch the requested data.");
+            }
+        }
     }
 }
