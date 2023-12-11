@@ -524,3 +524,11 @@ FodyWeavers.xsd
 # JetBrains Rider
 
 # End of https://www.toptal.com/developers/gitignore/api/aspnetcore,csharp
+*.editorconfig
+*.cache
+*.editorconfig
+Backend/VoedselBackend/BusinessLayer/obj/Debug/net6.0/BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+Backend/VoedselBackend/DBLayer/obj/Debug/net6.0/DBLayer.csproj.AssemblyReference.cache
+Backend/VoedselBackend/DBLayer/obj/Debug/net6.0/DBLayer.GeneratedMSBuildEditorConfig.editorconfig
+Backend/VoedselBackend/VoedselASP/obj/Debug/net6.0/VoedselASP.csproj.AssemblyReference.cache
+Backend/VoedselBackend/VoedselASP/obj/Debug/net6.0/VoedselASP.GeneratedMSBuildEditorConfig.editorconfig
