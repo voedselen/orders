@@ -24,6 +24,10 @@ namespace BusinessLayer
                 }
                 else
                 {
+                    if (order.paid == null)
+                    {
+                        order.paid = false;
+                    }
                     return dB_AccessOrder.AddOrderDB(order);
                 }
             }

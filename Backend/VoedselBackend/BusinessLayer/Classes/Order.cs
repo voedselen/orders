@@ -15,7 +15,7 @@ namespace BusinessLayer
         }
         public List<MenuItem> OrderItems { get; set; }
         private int orderTable;
-        public bool? paid { get; private set; }
+        public bool? paid { get; set; }
 
         public int OrderTable
         {
@@ -46,11 +46,11 @@ namespace BusinessLayer
             this.ID = id;
             this.OrderItems = orderItems;
             this.orderTable = orderTable;
-            this.paid = paid;
+            this.paid = false;
             this.orderMsg = "";
         }
 
-        public Order(int id, List<MenuItem> orderItems, int orderTable, bool? paid)
+        public Order(int id, List<MenuItem> orderItems, int orderTable, bool? paid, string orderMSg)
         {
             this.ID = id;
             this.OrderItems = orderItems;
