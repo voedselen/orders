@@ -134,7 +134,7 @@ namespace DBLayer
             return orders;            
         }
 
-        public List<MenuItem>? ReadMenuItemsDb(int orderId)
+        public List<MenuItem> ReadMenuItemsDb(int orderId)
         {
             SqlConnection connection = new SqlConnection(CONNECTION_STRING);
             List<MenuItem> menuItems = new List<MenuItem>();
@@ -158,7 +158,7 @@ namespace DBLayer
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
-                return null;
+                return menuItems;
             }
         }
 
@@ -182,7 +182,8 @@ namespace DBLayer
                             while (reader.Read())
                             {
                                 int orderId = (int)reader["id"];
-                                orders.Add(new Order(orderId, orderItems: ReadMenuItemsDb(orderId), tableNumber, false));
+                                List<MenuItem> orderItems = ReadMenuItemsDb(orderId);
+                                orders.Add(new Order(orderId, orderItems ?? new List<MenuItem>(), tableNumber, false));
                             }
                         }
                     }
@@ -192,7 +193,7 @@ namespace DBLayer
             }
             catch (Exception)
             {
-                throw new Exception("The backend-server could not fetch the requested data.");
+                throw;
             }
         }
     }
