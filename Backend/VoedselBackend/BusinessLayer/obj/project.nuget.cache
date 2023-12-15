@@ -1,8 +1,32 @@
 {
   "version": 2,
-  "dgSpecHash": "mtBTlYjnbDrwzUgvZEiASDVhq3m9EREAMpAsjocck3CJxinqyG4oAA2PQ+Qn7PyBlVIqSLupx4dVKweS/Vy00g==",
+  "dgSpecHash": "LGujukWjaLBVhHp1trAumpGB54BiVI5QYUgccp87AHUKFtyFZvolWpZn9ssWLcU3CuS5IgcsoSQ2FIlm1FDTfg==",
   "success": true,
-  "projectFilePath": "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Klave\\.nuget\\packages\\newtonsoft.json\\7.0.1\\newtonsoft.json.7.0.1.nupkg.sha512",
+    "C:\\Users\\Klave\\.nuget\\packages\\paypal\\1.9.1\\paypal.1.9.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Newtonsoft.Json 7.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PayPal 1.9.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "PayPal",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

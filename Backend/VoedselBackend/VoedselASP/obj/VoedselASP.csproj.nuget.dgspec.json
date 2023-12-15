@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj": {}
+    "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj": {}
   },
   "projects": {
-    "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\Envy\\.nuget\\packages\\",
-        "outputPath": "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\BusinessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\Klave\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Envy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Klave\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -43,6 +43,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "PayPal": {
+              "target": "Package",
+              "version": "[1.9.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -59,24 +65,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj": {
+    "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj",
         "projectName": "DBLayer",
-        "projectPath": "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj",
-        "packagesPath": "C:\\Users\\Envy\\.nuget\\packages\\",
-        "outputPath": "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\DBLayer\\obj\\",
+        "projectPath": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj",
+        "packagesPath": "C:\\Users\\Klave\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\DBLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Envy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Klave\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -91,8 +97,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj"
+              "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj"
               }
             }
           }
@@ -110,6 +116,10 @@
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.1.2, )"
+            },
+            "PayPal": {
+              "target": "Package",
+              "version": "[1.9.1, )"
             }
           },
           "imports": [
@@ -128,24 +138,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj": {
+    "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj",
+        "projectUniqueName": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj",
         "projectName": "VoedselASP",
-        "projectPath": "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj",
-        "packagesPath": "C:\\Users\\Envy\\.nuget\\packages\\",
-        "outputPath": "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\VoedselASP\\obj\\",
+        "projectPath": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\VoedselASP\\VoedselASP.csproj",
+        "packagesPath": "C:\\Users\\Klave\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\VoedselASP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Envy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Klave\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -160,11 +170,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj"
+              "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj"
               },
-              "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj": {
-                "projectPath": "E:\\Visual Studio\\VoedselenOrders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj"
+              "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj": {
+                "projectPath": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\DBLayer\\DBLayer.csproj"
               }
             }
           }
@@ -186,6 +196,10 @@
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.19.4, )"
+            },
+            "PayPal": {
+              "target": "Package",
+              "version": "[1.9.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -215,7 +229,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
