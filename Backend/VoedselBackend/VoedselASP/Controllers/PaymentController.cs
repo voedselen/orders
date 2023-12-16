@@ -14,7 +14,7 @@ namespace VoedselASP.Controllers
         {
             _paypalService = iPaypalService;
         }
-        [HttpPut]
+        
         [HttpPost]
         
         public IActionResult Update([FromBody] Payments orderList)
