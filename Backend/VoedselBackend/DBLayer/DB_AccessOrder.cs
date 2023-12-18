@@ -173,7 +173,7 @@ namespace DBLayer
                 {
                     connection.Open();
 
-                    using (SqlCommand readOrderItemCommand = new SqlCommand("select id from Orders where tableNumber=@tableNumber AND paid = 0", connection))
+                    using (SqlCommand readOrderItemCommand = new SqlCommand("select id, message FROM Orders where tableNumber=@tableNumber AND paid = 0", connection))
                     {
                         readOrderItemCommand.Parameters.AddWithValue("@tableNumber", tableNumber);
 
@@ -182,8 +182,11 @@ namespace DBLayer
                             while (reader.Read())
                             {
                                 int orderId = (int)reader["id"];
+                                // Check for DBNull before casting to string
+                                string orderMsg = reader["message"] == DBNull.Value ? null : (string)reader["message"];
+
                                 List<MenuItem> orderItems = ReadMenuItemsDb(orderId);
-                                orders.Add(new Order(orderId, orderItems ?? new List<MenuItem>(), tableNumber, false));
+                                orders.Add(new Order(orderId, orderItems ?? new List<MenuItem>(), tableNumber, orderMsg, false));
                             }
                         }
                     }

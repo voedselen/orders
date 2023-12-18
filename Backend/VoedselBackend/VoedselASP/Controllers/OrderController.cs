@@ -82,8 +82,7 @@ namespace VoedselASP.Controllers
             }
         }
 
-        // To hit this endpoint, use an id as parameter within the url: (only available when using POST)
-        // https://localhost:7116/api/Order/UnpaidOrdersByTableNumber?tablenumber={dynamic id}
+        
         [HttpPost(template: "FetchUnpaidOrdersByTableNumber")]
         public IActionResult UnpaidOrdersByTableNumber([FromQuery] int tableNumber)
         {

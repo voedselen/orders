@@ -5,14 +5,16 @@ namespace BusinessLayer
 {
     public class Order
     {
-        [JsonIgnore]
         public int ID { get; set; }
         private double totalPrice;
-        private string? orderMsg;
-        public string? OrderMsg
+        private string orderMsg;
+
+        public string OrderMsg
         {
-            get; set;
+            get { return orderMsg; }
+            set { orderMsg = value; }
         }
+
         public List<MenuItem> OrderItems { get; set; }
         private int orderTable;
         public bool? paid { get; private set; }
