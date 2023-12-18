@@ -1,5 +1,6 @@
 using BusinessLayer;
 using BusinessLayer.DB_Interfaces;
+using BusinessLayer.Logic;
 using DBLayer;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<IOrderBusinessLogic>(new AccessOrders(new DB_AccessOrder()));
+builder.Services.AddSingleton<IPaypalServices>(new PaypalService(new DB_PaypalService()));
 var app = builder.Build();
 
 // Enable CORS
