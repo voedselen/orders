@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vzM1e5FW3TM7fpZGIKRNLl8Y2wfE4waRc3BvYsVZ6CKolHtDQXHCA3+6I6RUsqUFYVF2/SjHkJCiUil1aRK92g==",
+  "dgSpecHash": "E6IghUfpJOeHpHzRl6iRuzr2fkAnOjS8g9JcNTVvXX794W84SXOMgyKDObG7mmyIkBm8Ldms+y+Cp4VvSYR/Vw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexv\\Source\\Repos\\voedselen\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -81,5 +81,24 @@ namespace VoedselASP.Controllers
                 return BadRequest(response);
             }
         }
+
+        [HttpPost(template: "FetchUnpaidOrdersByTableNumber")]
+        public IActionResult UnpaidOrdersByTableNumber([FromQuery] int tableNumber)
+        {
+            bool result = true;
+
+            try
+            {
+                List<Order> unpaidTableOrdersResult = _orderLogic.GetUnpaidOrdersByTableNumber(tableNumber);
+                var response = new { result = result, status = 200, message = "success", unpaidTableOrders = unpaidTableOrdersResult.ToArray() };
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                result = false;
+                var response = new { result = result, status = 500, message = ex.Message };
+                return BadRequest(response);
+            }
+        }
     }
 }

@@ -57,7 +57,7 @@ namespace BusinessLayer
             this.ID = id;
             this.OrderItems = orderItems;
             this.orderTable = orderTable;
-            this.orderMsg = "";
+            this.orderMsg = orderMSg;
             this.paid = paid;
         }
 
