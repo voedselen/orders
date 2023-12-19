@@ -148,7 +148,7 @@ namespace DBLayer
                 {
                     int ID = (int)itemReaderCommand["order_id"];
                     string menuItem = (string)itemReaderCommand["menu_item"];
-                    int price = (int)itemReaderCommand["price"];
+                    double price = (double)itemReaderCommand["price"];
                     MenuItem itemToAdd = new MenuItem(menuItem, price);
                     menuItems.Add(itemToAdd);
                 }
