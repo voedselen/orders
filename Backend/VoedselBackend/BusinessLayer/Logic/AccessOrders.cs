@@ -18,8 +18,9 @@ namespace BusinessLayer
         {
             try
             {
-                if (order == null || order.ID < 0 || !order.OrderItems.Any() || order.TotalPrice == 0)
+                if (!order.OrderItems.Any())
                 {
+                    Console.WriteLine("No orderitems in this order!");
                     return false;
                 }
                 else

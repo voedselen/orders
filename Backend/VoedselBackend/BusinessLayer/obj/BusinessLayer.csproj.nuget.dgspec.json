@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {}
+    "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\Klave\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\BusinessLayer\\obj\\",
+        "projectPath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Klave\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,19 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "LGujukWjaLBVhHp1trAumpGB54BiVI5QYUgccp87AHUKFtyFZvolWpZn9ssWLcU3CuS5IgcsoSQ2FIlm1FDTfg==",
+  "dgSpecHash": "EHypNA4rv44KWfn9YUb+sz2W/GOxCFBLdrzR75NoWwXNrRmiG41lJocvj3YOpTuE2Sbekf8Ur3sQmKD+QucYrA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Documents\\Fontys\\Software\\Sem3\\orders\\Backend\\VoedselBackend\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Klave\\.nuget\\packages\\newtonsoft.json\\7.0.1\\newtonsoft.json.7.0.1.nupkg.sha512",
-    "C:\\Users\\Klave\\.nuget\\packages\\paypal\\1.9.1\\paypal.1.9.1.nupkg.sha512"
+    "C:\\Users\\HP\\.nuget\\packages\\newtonsoft.json\\7.0.1\\newtonsoft.json.7.0.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\paypal\\1.9.1\\paypal.1.9.1.nupkg.sha512"
   ],
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Klave\\OneDrive - Office 365 Fontys\\Documents\\GitHub\\orders\\Backend\\VoedselBackend\\BusinessLayer\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1701",
       "level": "Warning",
