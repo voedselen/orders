@@ -2,6 +2,7 @@
 using BusinessLayer.DB_Interfaces;
 using DBLayer;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -25,7 +26,7 @@ namespace VoedselASP.Controllers
             try
             {
                 List<Order> orders =_orderLogic.ReadOrdersDB();
-                var response = new { result = result, status = 200, message = "success", orders=orders.ToArray() };
+                var response = new { result = result, status = 200, message = "success", orders};
                 return Ok(response);
             }
             catch (Exception ex)
@@ -44,6 +45,10 @@ namespace VoedselASP.Controllers
 
             try
             {
+                // Log order details for troubleshooting
+                Console.WriteLine($"Received Order: {JsonConvert.SerializeObject(order)}");
+
+
                 _orderLogic.AddOrderDB(order);
                 var response = new { result = result, status=200, message="success" };
                 return Ok(response);

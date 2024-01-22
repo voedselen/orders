@@ -33,30 +33,35 @@ namespace UnitTests
             }
         }
 
+        public List<Order> GetUnpaidOrdersByTableNumber(int tableNumber)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<MenuItem> ReadMenuItemsDb(int orderId)
         {
             if (orderId == 1)
             {
                 return new List<MenuItem>()
                 {
-                    new MenuItem("Food1", 1),
-                    new MenuItem("Food2", 2)
+                    new MenuItem(12, "Food1", 1),
+                    new MenuItem(13, "Food2", 2)
                 };
             }
             else if (orderId == 2)
             {
                 return new List<MenuItem>()
                 {
-                    new MenuItem("Food1", 1),
-                    new MenuItem("Food2", 2)
+                    new MenuItem(15, "Food1", 1),
+                    new MenuItem(17, "Food2", 2)
                 };
             }
             else if (orderId == 3)
             {
                 return new List<MenuItem>()
                 {
-                    new MenuItem("Food1", 1),
-                    new MenuItem("Food2", 2)
+                    new MenuItem(12, "Food1", 1),
+                    new MenuItem(12, "Food2", 2)
                 };
             }
             else

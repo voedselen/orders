@@ -1,7 +1,9 @@
 ﻿using BusinessLayer.DB_Interfaces;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,6 +16,45 @@ namespace BusinessLayer
         {
             this.dB_AccessOrder = dB_AccessOrder;
         }
+
+        private bool SendOrderToStaffEnd(Order order)
+        {
+            try
+            {
+                    string url = "https://voedselen.nl/api/orders";
+
+                    // Prepare the data to be sent in the POST request body
+                    var requestData = new
+                    {
+                        restaurantId = order.RestaurantId,
+                        tableId = order.OrderTable,
+                        items = order.OrderItems.Select(item => new { menuItemId = item.id })
+                    };
+
+                    // Convert the requestData to JSON
+                    string jsonBody = JsonConvert.SerializeObject(requestData);
+
+                    // Create a WebClient to send the POST request
+                    using (WebClient client = new WebClient())
+                    {
+                        client.Headers[HttpRequestHeader.ContentType] = "application/json";
+
+                        // Post the data to the specified endpoint
+                        string response = client.UploadString(url, "POST", jsonBody);
+
+                        // You can print or log the response if needed
+                        Console.WriteLine(response);
+                    }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+            return true;
+        }
+
+
         public bool AddOrderDB(Order order)
         {
             try
@@ -29,7 +70,16 @@ namespace BusinessLayer
                     {
                         order.paid = false;
                     }
-                    return dB_AccessOrder.AddOrderDB(order);
+                    
+                    // Send order to staff database first
+                    bool sendToStaffDatabase = SendOrderToStaffEnd(order);
+                    if (sendToStaffDatabase)
+                    {
+                        // Add order to local database as well
+                        return dB_AccessOrder.AddOrderDB(order);
+                    }
+
+                    return true;
                 }
             }
             catch(Exception ex)
@@ -50,7 +100,7 @@ namespace BusinessLayer
         }
         public List<Order>? ReadOrdersDB()
         {
-            List<Order> orders = dB_AccessOrder.ReadOrdersDB();
+            List<Order>? orders = dB_AccessOrder.ReadOrdersDB();
             return orders;
         }
 

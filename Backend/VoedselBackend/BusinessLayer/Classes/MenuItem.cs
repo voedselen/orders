@@ -8,13 +8,15 @@ namespace BusinessLayer
 {
     public class MenuItem
     {
+        public int id { get; private set; }
         public string name { get; private set; }
         public double price { get; private set; }
 
-        public MenuItem(string name, double price)        {
+        public MenuItem(int id, string name, double price)
+        {
+            this.id = id;
             this.name = name;
             this.price = price;
         }
-
     }
 }

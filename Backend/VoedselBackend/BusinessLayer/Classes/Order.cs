@@ -18,6 +18,7 @@ namespace BusinessLayer
         public List<MenuItem> OrderItems { get; set; }
         private int orderTable;
         public bool? paid { get; set; }
+        public int? restaurantId;
 
         public int OrderTable
         {
@@ -28,6 +29,21 @@ namespace BusinessLayer
         {
             get { return totalPrice; }
             set { totalPrice = value; }
+        }
+
+        public int? RestaurantId
+        {
+            get { return restaurantId; }
+            set {
+                if (value == null)
+                {
+                    restaurantId = 0;
+                }
+                else
+                {
+                    restaurantId = value;
+                }
+            }
         }
 
         public Order()
@@ -61,9 +77,9 @@ namespace BusinessLayer
             this.paid = paid;
         }
 
-        public void AddMenuItem(string name, int price)
+        public void AddMenuItem(int id, string name, double price)
         {
-            OrderItems.Add(new MenuItem(name, (double)price));
+            OrderItems.Add(new MenuItem(id, name, (double)price));
         }
     }
 }

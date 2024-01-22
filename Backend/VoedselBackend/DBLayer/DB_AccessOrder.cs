@@ -94,8 +94,8 @@ namespace DBLayer
                 SqlDataReader readerCommand = readOrderCommand.ExecuteReader();
                 while (readerCommand.Read())
                 {
-                    int ID = (int)readerCommand["ID"];
-                    int table = (int)readerCommand["TableNumber"];
+                    int ID = (int)readerCommand["id"];
+                    int table = (int)readerCommand["tableNumber"];
                     bool? isPaid = null;
                     if (readerCommand["paid"] != DBNull.Value)
                     {
@@ -118,9 +118,9 @@ namespace DBLayer
                     SqlDataReader readerItemsCommand = readItemsCommand.ExecuteReader();
                     while (readerItemsCommand.Read())
                     {
-                        int price = (int)readerItemsCommand["price"];
+                        double price = (double)readerItemsCommand["price"];
                         string name = (string)readerItemsCommand["menu_item"];
-                        order.AddMenuItem(name, price);
+                        order.AddMenuItem(0, name, price);
                     }
                     readerItemsCommand.Close();
                 }
@@ -149,7 +149,7 @@ namespace DBLayer
                     int ID = (int)itemReaderCommand["order_id"];
                     string menuItem = (string)itemReaderCommand["menu_item"];
                     double price = (double)itemReaderCommand["price"];
-                    MenuItem itemToAdd = new MenuItem(menuItem, price);
+                    MenuItem itemToAdd = new MenuItem(0, menuItem, price);
                     menuItems.Add(itemToAdd);
                 }
                 connection.Close();
